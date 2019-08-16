@@ -116,7 +116,7 @@ export default class CodeChallengeComponent extends Component {
     this.set('api.headers.hackJwt', this.get('currentUser.user.hackJwt'))
     const code = this.get("code");
     const run = this.get("run");
-    const payload = yield this.get("api").request("code_challenges/submit", {
+    const payload = yield this.get("api").request("code_challenges/run", {
       method: "POST",
       data: {
         contestId: run.get("contestId"),
